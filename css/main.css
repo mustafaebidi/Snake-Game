@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.info {
+  position: relative;
+}
+
+.settings {
+  position: absolute;
+  z-index: 5555;
+  background-color: rgba(66, 20, 20, 0.767);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+
+.level > div {
+  padding: 10px;
+  background-color: rgba(1, 1, 241, 0.747);
+  cursor: pointer;
+}
+
+.level > div:hover {
+  background-color: rgba(0, 0, 255, 0.24);
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.board {
+  background-color: rgb(0, 0, 0);
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.555);
+}
+
+
+
+@media(max-width:768px){
+    .board{
+
+        height: 400px;
+        width: 400px;
+
+    }
+}
+
+
+.head {
+  background-color: rgb(255, 255, 255);
+}
+
+.body {
+  background-color: rgb(122, 19, 219);
+}
+
+.food {
+  background-color: yellow;
+  animation-name: scaled;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
