@@ -1,3 +1,5 @@
 link live server
 
-https://snakee-gamee.netlify.app/
+https://snaakee-gaame.netlify.app
+
+
